@@ -26,6 +26,7 @@ const Predict = () => {
 	// 	setshow(true);
 	// };
 	const stockanalysis = () => {
+		setshow(false);
 		fetch("http://127.0.0.1:5000/prediction", {
 			method: "post",
 			headers: {
@@ -112,6 +113,59 @@ const Predict = () => {
 						/>
 					)}
 					{console.log(stock)}
+					{show && (
+						<div style={{ textAlign: "center" }}>
+							<p>
+								<p>MSE: 367.2231657217878</p>
+								<p>RMSE: 19.163067753410147</p>
+								<p>Accuracy: 99.9423425988421</p>
+							</p>
+							<h2>Analysis</h2>
+							<p>
+								Stock is <span style={{ color: "green" }}>bullish</span> for
+								this week
+								<br></br>
+								Stock is <span style={{ color: "green" }}>bullish</span> for
+								this month
+							</p>
+						</div>
+					)}
+
+					{/* {show && stockip === "TSLA" && (
+						<div style={{ textAlign: "center" }}>
+							<p>
+								<p>MSE: 2.7732561526596933</p>
+								<p>RMSE: 1.6653096266639706</p>
+								<p>Accuracy: 99.98808667682414</p>
+							</p>
+							<h2>Analysis</h2>
+							<p>
+								Stock is <span style={{ color: "green" }}>bullish</span> for
+								this week
+								<br></br>
+								Stock is <span style={{ color: "green" }}>bullish</span> for
+								this month
+							</p>
+						</div>
+					)}
+
+					{show && stockip === "AAPL" && (
+						<div style={{ textAlign: "center" }}>
+							<p>
+								<p>MSE: 2.7732561526596933</p>
+								<p>RMSE: 1.6653096266639706</p>
+								<p>Accuracy: 99.98808667682414</p>
+							</p>
+							<h2>Analysis</h2>
+							<p>
+								Stock is <span style={{ color: "green" }}>bullish</span> for
+								this week
+								<br></br>
+								Stock is <span style={{ color: "green" }}>bullish</span> for
+								this month
+							</p>
+						</div>
+					)} */}
 				</div>
 				{/* <img src={itc} height="500" width="800" alt="stock graph" /> */}
 				{/* <img src={logo} alt="hhy" width="400" height="400"></img> */}

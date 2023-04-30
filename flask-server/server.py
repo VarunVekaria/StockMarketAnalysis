@@ -23,7 +23,8 @@ CORS(app)
 def prediction():
     
     if(request.method == 'POST'):
-        # print(json.loads(request.data)['stock'])
+        print(json.loads(request.data))
+       
         stock = json.loads(request.data)['stock']
         end = datetime.now()
         start = datetime(end.year - 1, end.month, end.day)
